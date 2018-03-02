@@ -1,0 +1,3 @@
+treematch/tm_verbose.lo: treematch/tm_verbose.c treematch/tm_verbose.h
+
+treematch/tm_verbose.h:
