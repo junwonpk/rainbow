@@ -291,7 +291,7 @@ def build_train(make_obs_ph, p_dist_func, num_actions, optimizer, grad_norm_clip
 
 def build_categorical_alg(p_ph, r_ph, a_next, gamma, batch_dim, done_mask, dist_params):
     """
-    Builds the vectorized cathegorical algorithm following equation (7) of 
+    Builds the vectorized cathegorical algorithm following equation (7) of
     'A Distributional Perspective on Reinforcement Learning' - https://arxiv.org/abs/1707.06887
     """
     z, dz = build_z(**dist_params)
@@ -315,5 +315,3 @@ def build_categorical_alg(p_ph, r_ph, a_next, gamma, batch_dim, done_mask, dist_
         ThTz = tf.einsum('ijk,ik->ij', Thz, p_best)
 
     return ThTz, {'p_best': p_best}
-
-
